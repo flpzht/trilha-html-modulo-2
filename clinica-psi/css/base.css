@@ -1,0 +1,203 @@
+/* ==================================== */
+/* RESET E VARIÁVEIS           */
+/* ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* CORES PERSONALIZADAS */
+:root {
+    --cor-primaria: #000000;      /* Preto principal */
+    --cor-secundaria: #FF8C00;    /* Laranja (Destaque/Acento) */
+    --cor-terciaria: #F0F0F0;     /* Cinza Claro (Fundo) */
+    --cor-texto: #333333;         /* Texto Escuro */
+    --cor-calma: #4682B4;         /* Azul Aço (Profissionalismo) */
+}
+
+/* ==================================== */
+/* LAYOUT GERAL                */
+/* ==================================== */
+body {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white; /* Conteúdo principal em fundo branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================================== */
+/* MENU LATERAL (.menu)        */
+/* ==================================== */
+.menu {
+    width: 200px;
+    min-width: 200px;
+    flex-shrink: 0;
+    background-color: var(--cor-primaria);
+    padding: 20px 0;;
+}
+
+/* TÍTULO DO MENU */
+.menu h3 {
+    color: var(--cor-secundaria); /* Laranja para o título */
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+/* ==================================== */
+/* CABEÇALHO (.header)         */
+/* ==================================== */
+.header {
+    padding: 20px 30px;
+    color: white;
+    
+    /* GRADIENTE LARANJA/PRETO APLICADO */
+    background-image: linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria)); 
+    box-shadow: 0 4px 6px -6px #222;
+
+    /* FLEXBOX PARA ALINHAR LOGO E TEXTO */
+    display: flex;
+    align-items: center; 
+    text-align: left;
+}
+
+/* LOGO (ÍCONE) */
+.header .banner-home {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.header .banner-about {
+    width:100%;
+    height: auto;
+    border-radius: 8px;
+}
+.header .banner-services {
+    width:100%;
+    height: auto;
+    border-radius: 8px;
+}
+.header .banner-contact {
+    width:100%;
+    height: auto;
+    border-radius: 8px;
+}
+.header .header-text {
+    flex-grow: 1;
+}
+
+.header h1 {
+    font-size: 2em; 
+    margin: 0;
+}
+
+.header h2 { /* Tagline */
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.8); 
+}
+
+/* ==================================== */
+/* CONTEÚDO (.content)         */
+/* ==================================== */
+.content {
+    padding: 40px;
+    min-height: 60vh; 
+}
+
+.content h2 {
+    color: var(--cor-calma);
+    border-bottom: 2px solid var(--cor-calma);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #4682B4;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.content table thead th {
+      background-color: #4682B4;
+      color: white;
+}
+.content tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.content tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.content form label{
+    display: table;
+    font-weight: bold;
+}
+.content form input,
+.content form textarea {    
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* ==================================== */
+/* RODAPÉ (.footer)            */
+/* ==================================== */
+.footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
